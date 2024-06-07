@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: lez4sxjfd-python-gitops
+  description: This is GitOps manifest for lez4sxjfd-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: lez4sxjfd-python
+    janus-idp.io/tekton: lez4sxjfd-python 
+    backstage.io/kubernetes-id: lez4sxjfd-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:lez4sxjfd-python
